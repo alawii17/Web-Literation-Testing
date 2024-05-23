@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;1,6..12,300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE;
+}
+
+/* Navigasi */
+nav > .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigasi Logo */
+.wrapper > .nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.wrapper > .nav-logo > img {
+    height: 10vh;
+}
+
+/* Navigasi Menu */
+.wrapper > .nav-menu {
+    width: 80%;
+}
+
+.wrapper > .nav-menu > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper > .nav-menu > ul > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 15px;
+}
+
+.wrapper > .nav-menu > ul > li > a:hover {
+    color: #ebb22f;
+}
+
+.wrapper > .nav-menu > ul > li > a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #ebb22f;
+    transform: scale(0);
+    transition: 0.3s linear;
+}
+
+.wrapper > .nav-menu > ul > li > a:hover::after {
+    transform: scaleX(0.5);
+}
+
+
+.wrapper > .nav-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.wrapper > .nav-login > a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 8px 15px;
+    background-color: #00ADB5;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.wrapper > .nav-login > a:hover {
+    transform: scale(1.03);
+}
+
+/* Hero Section */
+.wrapper > .hero-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper > .hero-section > .hero-description {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.wrapper > .hero-section > .hero-description > h1 {
+    font-family: "kanit", sans-serif;
+    font-size: 2rem;
+    color: #ebb22f;
+}
+
+.wrapper > .hero-section > .hero-description > h1 > span {
+    font-family: "kanit", sans-serif;
+    font-size: 2rem;
+    color: #00ADB5;
+}
+
+.wrapper > .hero-section > .hero-description > p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wrapper > .hero-section > .hero-description > a {
+    min-height: 44px;
+    min-width: 44px;
+    text-decoration: none;
+    color: #333;
+}
+
+.wrapper > .hero-section > .hero-description > .button {
+    border: 2px solid #ff9710;
+    background-color: transparent;
+    padding: 6px 7px 6px 10px;
+    border-radius: 10px;
+    transition: 0.3;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    font-weight: bold;
+}
+
+.wrapper > .hero-section > .hero-description > .button:hover {
+    background-color: #ffce10;
+    transform: scale(1.1);
+}
+
+.wrapper > .hero-section > .hero-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 50%;
+}
