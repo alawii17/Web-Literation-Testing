@@ -97,43 +97,67 @@ nav > .wrapper {
     transform: scale(1.03);
 }
 
+/* Humberg Button */
+button.hamburger-menu {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px;
+    padding-left: 90px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+  button.hamburger-menu > i {
+    color: #333;
+    font-size: 1.5rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  button.hamburger-menu > i.icon-close {
+    display: none;
+  }
+  
+
 /* Hero Section */
-.wrapper > .hero-section {
+.hero-section {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.wrapper > .hero-section > .hero-description {
+.hero-section > .hero-description {
     width: 50%;
     padding-left: 40px;
 }
 
-.wrapper > .hero-section > .hero-description > h1 {
+.hero-section > .hero-description > h1 {
     font-family: "kanit", sans-serif;
     font-size: 2rem;
     color: #ebb22f;
 }
 
-.wrapper > .hero-section > .hero-description > h1 > span {
+.hero-section > .hero-description > h1 > span {
     font-family: "kanit", sans-serif;
     font-size: 2rem;
     color: #00ADB5;
 }
 
-.wrapper > .hero-section > .hero-description > p {
+.hero-section > .hero-description > p {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.wrapper > .hero-section > .hero-description > a {
+.hero-section > .hero-description > a {
     min-height: 44px;
     min-width: 44px;
     text-decoration: none;
     color: #333;
 }
 
-.wrapper > .hero-section > .hero-description > .button {
+.hero-section > .hero-description > .button {
     border: 2px solid #ff9710;
     background-color: transparent;
     padding: 6px 7px 6px 10px;
@@ -147,14 +171,85 @@ nav > .wrapper {
     font-weight: bold;
 }
 
-.wrapper > .hero-section > .hero-description > .button:hover {
+.hero-section > .hero-description > .button:hover {
     background-color: #ffce10;
     transform: scale(1.1);
 }
 
-.wrapper > .hero-section > .hero-image {
+.hero-section > .hero-image {
     display: flex;
     justify-content: center;
     padding-top: 20px;
     width: 50%;
+}
+
+/* Waves */
+.wrapper > .waves {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    bottom: -1px;
+}
+
+.wrapper > .waves svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Test Introduction */
+.wrapper > .test-introduction-section {
+    display: flex;
+    align-items: center;
+    background-color: #393E46;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper > .test-introduction-section > .test-description {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.wrapper > .test-introduction-section > .test-description > h1 {
+    font-family: "kanit", sans-serif;
+    font-size: 2rem;
+    color: #ebb22f;
+}
+
+.wrapper > .test-introduction-section > .test-description > h1 > span {
+    font-family: "kanit", sans-serif;
+    font-size: 2rem;
+    color: #00ADB5;
+}
+
+.wrapper > .test-introduction-section > .test-description > p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #eee;
+}
+
+.wrapper > .test-introduction-section > .test-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    width: 50%;
+}
+
+/* Footer */
+.footer-section {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    background: #393E46;
 }
