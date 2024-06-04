@@ -7,7 +7,7 @@ import questions from '../../data/questions';
 const literationTest = {
   async render() {
     return `
-    <main class="main">
+    <main class="main" id="main-content">
     <div class="wrapper">
         <section class="test-entry">
             <div class="test-entry-content">
@@ -33,7 +33,7 @@ const literationTest = {
               </div>
 
               <div class="result-box">
-                <h2>Quiz Result</h2>
+                <h2>Hasil tes</h2>
                 <div class="percentage-container">
                   <div class="circular-progress">
                     <span class="progress-value">0%</span>
@@ -67,7 +67,7 @@ const literationTest = {
     <div class="btn-group">
       <button class="info-btn exit-btn">Batal</button>
       <a href="#" class="info-btn continue-btn">Mulai</a>
-</div>
+    </div>
       `;
   },
 
@@ -77,6 +77,7 @@ const literationTest = {
     const exitBtn = document.querySelector('.exit-btn');
     const wrapper = document.querySelector('.wrapper');
     const main = document.querySelector('.main');
+    const footer = document.querySelector('.footer-section');
     const continueBtn = document.querySelector('.continue-btn');
     const testSection = document.querySelector('.test-section');
     const testBox = document.querySelector('.test-box');
@@ -88,19 +89,23 @@ const literationTest = {
       popupInfo.classList.add('active');
       main.classList.add('active');
       wrapper.classList.add('active');
+      footer.classList.add('active');
     };
 
     exitBtn.onclick = () => {
       popupInfo.classList.remove('active');
       main.classList.remove('active');
       wrapper.classList.remove('active');
+      footer.classList.remove('active');
     };
 
-    continueBtn.onclick = () => {
+    continueBtn.onclick = (e) => {
+      e.preventDefault();
       testSection.classList.add('active');
       popupInfo.classList.remove('active');
       main.classList.remove('active');
       wrapper.classList.remove('active');
+      footer.classList.remove('active');
       testBox.classList.add('active');
 
       showQuestions(0);
@@ -181,7 +186,9 @@ const literationTest = {
 
       const option = document.querySelectorAll('.option');
       for (let i = 0; i < option.length; i++) {
-        option[i].setAttribute('onclick', 'optionSelected(this)');
+        option[i].addEventListener('click', function () {
+          optionSelected(this);
+        });
       }
     }
 
@@ -197,7 +204,6 @@ const literationTest = {
       } else {
         answer.classList.add('incorrect');
 
-        // if answer incorrect, auto seleced correct answer
         for (let i = 0; i < allOptions; i++) {
           if (optionList.children[i].textContent.trim() == correctAnswer) {
             optionList.children[i].setAttribute('class', 'option correct');
