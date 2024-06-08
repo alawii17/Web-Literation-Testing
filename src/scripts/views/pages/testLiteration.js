@@ -186,6 +186,7 @@ const literationTest = {
 
       const option = document.querySelectorAll('.option');
       for (let i = 0; i < option.length; i++) {
+        // eslint-disable-next-line func-names
         option[i].addEventListener('click', function () {
           optionSelected(this);
         });

@@ -10,7 +10,7 @@ const home = {
           dan pemahaman yang mendalam. Mari uji dan tingkatkan 
           kemampuan literasi Anda bersama kami.
         </p>
-        <a href="#" class="button">Cari Tahu Sekarang</a>
+        <a href="#/literationtest" class="button">Cari Tahu Sekarang</a>
       </div>
       <div class="hero-image">
         <img src="./image/vector-Literasi.png" alt="vector-beranda">
@@ -30,8 +30,11 @@ const home = {
   `;
   },
 
-  async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+  async renderPage() {
+    const testButton = document.getElementById('testButton');
+    testButton.addEventListener('click', () => {
+      window.location.hash = '#/literationtest';
+    });
   },
 };
 

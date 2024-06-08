@@ -19,11 +19,14 @@ class App {
   async renderPage() {
     const url = UrlParser.parserActiveUrlWithCombiner();
     const page = routes[url];
-    if (this._content) {
+
+    if (page) {
       this._content.innerHTML = await page.render();
-      await page.afterRender();
+      if (typeof page.afterRender === 'function') {
+        await page.afterRender();
+      }
     } else {
-      console.error('Element with id "main-content" not found');
+      console.error(`Page with URL '${url}' not found in routes.`);
     }
   }
 }

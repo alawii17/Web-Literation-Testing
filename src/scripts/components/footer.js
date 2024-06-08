@@ -3,7 +3,7 @@ class footerSection extends HTMLElement {
     super();
     this.setAttribute('custom-attribute', 'value-custom-attribute');
     this.innerHTML = `
-    <section class="footer-section">
+    <section class="footer-section" id="footer">
         <p>Copyright &copy 2024 || Literation Testing </p>
     </section>
           `;

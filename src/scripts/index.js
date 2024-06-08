@@ -11,10 +11,19 @@ const app = new App({
   content: document.querySelector('#main-content'),
 });
 
+function updateNavbarLoginState() {
+  const headerBar = document.querySelector('header-bar');
+  if (headerBar) {
+    headerBar.updateLoginState();
+  }
+}
+
 window.addEventListener('hashchange', () => {
   app.renderPage();
+  updateNavbarLoginState();
 });
 
 window.addEventListener('load', () => {
   app.renderPage();
+  updateNavbarLoginState();
 });

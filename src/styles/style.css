@@ -80,25 +80,108 @@ nav > .wrapper {
 }
 
 
-.wrapper > .nav-login {
+.wrapper > .nav_login {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30%;
 }
 
-.wrapper > .nav-login > a {
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid;
-    padding: 8px 15px;
-    background-color: #00ADB5;
-    border-radius: 20px;
-    font-weight: bold;
+.nav_login > #loginbtn {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 8px 15px;
+  background-color: #00ADB5;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
-.wrapper > .nav-login > a:hover {
-    transform: scale(1.03);
+.nav_login > #loginbtn:hover {
+  transform: scale(1.03);
+}
+
+.nav_login > #logoutbtn {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 8px 15px;
+  background-color: #00ADB5;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav_login > #logoutbtn:hover {
+  transform: scale(1.03);
+}
+
+/* Popup Log out */
+.modal {
+  display: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  height: 400px;
+  width: 550px;
+}
+
+.modal-content > p {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.modal-content > button {
+  width: 200px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  font-weight: 700;
+}
+
+.modal-content > #confirmLogoutButton {
+  background: transparent;
+  border-color: #00adb5;
+  color: #00ADB5;
+}
+
+.modal-content > #confirmLogoutButton:hover {
+  background: #00adb5;
+  border-color: #0c8086;
+  color: #fff;
+}
+
+.modal-content > #cancelLogoutButton {
+  background: #00adb5;
+  border-color: #00adb5;
+  color: #fff;
+}
+
+.modal-content > #cancelLogoutButton:hover {
+  background: #04858b;
+  border-color: #04858b;
 }
 
 /* Humberg Button */
@@ -677,4 +760,260 @@ button.hamburger-menu {
   
 .footer-section.active {
     filter: blur(15px); 
+}
+
+/* Login */
+.login {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.login > .login-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.login > .login-image > .login-image-buttonBack {
+  width: 70%;
+  height: 22%;
+}
+
+.login > .login-image > .login-image-buttonBack > a {
+  border: 1px solid;
+  border-radius: 50%;
+  text-decoration: none;
+  padding: 2px 7px;
+  display: flex;
+  margin-right: 70vh;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.login > .login-image > .login-image-buttonBack > a:hover {
+  background-color: #ebb22f;
+  color: #eeeeee;
+}
+
+.login > .login-image > .login-image-vector > img {
+  height: 60%;
+}
+
+.login > .login-form {
+  background-color: #393e46;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.login > .login-form > h1 {
+  font-family: "Kanit", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.login > .login-form > form {
+  width: 60%;
+}
+
+.login > .login-form > form > .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login > .login-form > form > .input-wrapper > label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.login > .login-form > form > .input-wrapper > input {
+  border-radius: 20px;
+  border: none;
+  min-height: 44px;
+  min-width: 44px;
+  margin-bottom: 15px;
+  padding: 10px;
+  outline-color: #ebb22f;
+}
+
+.login > .login-form > form > #submitButton-login {
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 30px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ebb22f;
+  cursor: pointer;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login > .login-form > form > #submitButton-login:hover {
+  transform: scale(1.03);
+  background-color: #eb932f;
+}
+
+.login > .login-form > form > p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login > .login-form > form > p > a {
+  text-decoration: none;
+  color: #00adb5;
+  font-weight: bolder;
+}
+
+.login > .login-form > form > p > a:hover {
+  text-decoration: underline;
+}
+
+/* Register */
+.register {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+}
+
+.register > .register-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.register > .register-image > .register-image-buttonBack {
+  display: block;
+  margin-left: auto;
+  width: 20%;
+  height: 22%;
+}
+
+.register > .register-image > .register-image-buttonBack > a {
+  border: 1px solid;
+  border-radius: 50%;
+  text-decoration: none;
+  padding: 2px 7px;
+  display: flex;
+  margin-right: 70vh;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.register > .register-image > .register-image-buttonBack > a:hover {
+  background-color: #ebb22f;
+  color: #eeeeee;
+}
+
+.register > .register-image > .register-image-vector > img {
+  height: 60%;
+}
+
+.register > .register-form {
+  background-color: #393e46;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.register > .register-form > h1 {
+  font-family: "Kanit", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.register > .register-form > form {
+  width: 60%;
+}
+
+.register > .register-form > form > .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register > .register-form > form > .input-wrapper > label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.register > .register-form > form > .input-wrapper > input {
+  border-radius: 20px;
+  border: none;
+  min-height: 44px;
+  min-width: 44px;
+  margin-bottom: 15px;
+  padding: 10px;
+  outline-color: #ebb22f;
+}
+
+.register > .register-form > form > #submitButton-register {
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 30px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: none;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ebb22f;
+  cursor: pointer;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.register > .register-form > form > #submitButton-register:hover {
+  transform: scale(1.03);
+  background-color: #eb932f;
+}
+
+.register > .register-form > form > p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register > .register-form > form > p > a {
+  text-decoration: none;
+  color: #00adb5;
+  font-weight: bolder;
+}
+
+.register > .register-form > form > p > a:hover {
+  text-decoration: underline;
 }
