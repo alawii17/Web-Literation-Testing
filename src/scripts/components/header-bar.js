@@ -21,7 +21,7 @@ class headerBar extends HTMLElement {
             <ul>
               <li><a href="#/home">Beranda</a></li>
               <li><a href="#/literationtest">Tes Literasi</a></li>
-              <li><a href="#">Forum Diskusi</a></li>
+              <li><a href="#/forumdiskusi">Forum Diskusi</a></li>
               <li><a href="#">Tentang Kami</a></li>
             </ul>
           </div>

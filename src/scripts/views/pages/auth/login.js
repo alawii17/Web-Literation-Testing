@@ -53,8 +53,8 @@ const login = {
       const password = document.getElementById('password').value;
 
       try {
-        await AuthApi.login(email, password);
-        alert('Login berhasil!');
+        const { user } = await AuthApi.login(email, password);
+        localStorage.setItem('userId', user.id);
         localStorage.setItem('isLoggedIn', 'true');
         document.querySelector('header-bar').updateLoginState();
         window.location.hash = '#/home';
