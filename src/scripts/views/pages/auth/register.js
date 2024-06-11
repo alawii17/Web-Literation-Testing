@@ -67,7 +67,7 @@ const register = {
         alert('Registrasi berhasil!');
         localStorage.setItem('isLoggedIn', 'true');
         document.querySelector('header-bar').updateLoginState();
-        window.location.hash = '#/home';
+        window.location.hash = '#/login';
       } catch (error) {
         alert(`Registrasi gagal: ${error.message}`);
       }

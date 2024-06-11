@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable camelcase */
 import DiscussionApi from '../data/discussion-Api';
 
@@ -144,11 +145,10 @@ class DiscussionItem extends HTMLElement {
   }
 
   async deleteDiscussion() {
-    // Mendapatkan ID pengguna yang saat ini masuk (disimulasikan)
     const currentUserId = localStorage.getItem('userId');
 
     // Memeriksa apakah pengguna saat ini adalah pemilik diskusi
-    const isOwner = currentUserId === this._discussion.user_id;
+    const isOwner = currentUserId === this._discussion.user_id.toString(); // Mengonversi user_id menjadi string
 
     // Menampilkan pesan kesalahan jika pengguna bukan pemilik diskusi
     if (!isOwner) {

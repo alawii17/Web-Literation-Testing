@@ -2,11 +2,36 @@
 
 @media only screen and (max-width: 600px) {}
 
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+  .footer-section .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section .footer-followUs,
+  .footer-section .footer-legal {
+    margin: 20px 0;
+  }
+
+  .footer-section .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section .footer-sosmed {
+    margin-top: 10px;
+  }
+}
 
 @media only screen and (max-width: 850px) {
     .wrapper > .nav-login {
         display: flex;
+    }
+
+    .wrapper > .nav-menu {
+      width: 60%;
     }
 
     button.hamburger-menu {
@@ -32,8 +57,9 @@
     
       .tampil {
         display: inline-block;
+        color: #fff;
       }
-    
+
       .tampil > ul > li {
         margin-top: 10px;
         padding-top: 20px;
@@ -42,9 +68,81 @@
         width: 100%;
       }
 
-      .tampil > ul > li > a {
+      .wrapper > .nav-menu > ul > li > a {
         color: #fff;
       }
+
+      .wrapper > .nav-menu > ul > li > a:hover::after {
+        transform: scaleX(30);
+      }
+}
+
+@media only screen and (max-width: 982px){
+  .wrapper > .nav-menu {
+    width: 70%;
+    padding-top: 5px;
+  }
+
+  .wrapper > .nav-menu > ul > li {
+    display: inline;
+    padding: 0;
+  }
+
+  .wrapper > .nav-menu > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero-section {
+    height: 85vh;
+}
+
+.hero-section > .hero-description {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.hero-section > .hero-description > h1 {
+    font-size: 1.5rem;
+}
+
+.hero-section > .hero-description > h1 > span {
+    font-size: 1.5rem;
+}
+
+.hero-section > .hero-description > p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.hero-section > .hero-image {
+    width: 40%;
+}
+
+.hero-section > .hero-image img {
+  width: 90%;
+}
+
+.test-introduction-section > .test-description > h1 {
+  font-size: 1.5rem;
+}
+
+.test-introduction-section > .test-description > p {
+  font-size: 0.8rem;
+  text-align: justify;
+  padding-right: 15px;
+}
+
+.test-introduction-section > .test-description > h1 > span {
+  font-size: 1.5rem;
+}
+
+.test-introduction-section > .test-image img {
+  width: 90%;
+}
 }
 
 @media only screen and (max-width: 1000px) {}
