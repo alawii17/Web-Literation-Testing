@@ -1,3 +1,4 @@
+// app.js
 import DrawerInitiator from '../utils/drawer-inititator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -20,13 +21,13 @@ class App {
     const url = UrlParser.parserActiveUrlWithCombiner();
     const page = routes[url];
 
-    if (page) {
+    if (page && typeof page.render === 'function') {
       this._content.innerHTML = await page.render();
       if (typeof page.afterRender === 'function') {
         await page.afterRender();
       }
     } else {
-      console.error(`Page with URL '${url}' not found in routes.`);
+      console.error(`Page with URL '${url}' not found or render method is not a function.`);
     }
   }
 }

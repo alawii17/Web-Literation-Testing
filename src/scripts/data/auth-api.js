@@ -73,6 +73,42 @@ const AuthApi = {
 
     return await response.json();
   },
+
+  async getProfile(id) {
+    try {
+      const response = await fetch(API_ENDPOINT.PROFILE(id));
+      if (!response.ok) {
+        throw new Error('Failed to fetch profile data');
+      }
+      const profileData = await response.json();
+      return profileData;
+    } catch (error) {
+      console.error('Error:', error);
+      throw error;
+    }
+  },
+
+  async updateProfile(id, profileData) {
+    try {
+      const response = await fetch(API_ENDPOINT.PROFILE(id), {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(profileData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to update profile');
+      }
+
+      const updatedProfile = await response.json();
+      return updatedProfile;
+    } catch (error) {
+      console.error('Error:', error);
+      throw error;
+    }
+  },
 };
 
 export default AuthApi;

@@ -37,17 +37,17 @@ const register = {
                 <div id="passwordError" class="error-message"></div>
             </div>
             <button id="submitButton-register" type="submit">Daftar</button>
-            <p>Sudah mempunyai akun? <a href="#/login">Masuk disini</a></p>
         </form>
+        <p>Sudah mempunyai akun? <a href="#/login">Masuk disini</a></p>
     </div>
     <div class="register-image">
-        <div class="register-image-buttonBack">
-           <a href="#/home"><i class="fa-solid fa-arrow-right"></i></a>
-        </div>
         <div class="login-image-vector">
             <img src="image/Vector-Register&login.png" alt="register">
         </div>
     </div>
+    <div class="register-image-buttonBack">
+           <a href="#/home"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
     </div>
     `;
   },

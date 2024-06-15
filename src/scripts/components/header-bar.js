@@ -17,7 +17,7 @@ class headerBar extends HTMLElement {
             <i class="fa-solid fa-bars icon-bars"></i>
             <i class="fa-solid fa-xmark icon-close"></i>
           </button>
-          <div class="nav-menu">
+          <div class="nav-menu">  
             <ul>
               <li><a href="#/home">Beranda</a></li>
               <li><a href="#/literationtest">Tes Literasi</a></li>
@@ -25,10 +25,20 @@ class headerBar extends HTMLElement {
               <li><a href="#">Tentang Kami</a></li>
             </ul>
           </div>
-          <div class="nav_login">
-            <a href="#/login" id="loginbtn" style="display: none;">Masuk</a>
-            <button id="logoutbtn" style="display: none;">Keluar</button>
+          <div class="nav-profile" style="display: none;">
+            <ul>
+              <li class="profile-dropdown">
+                <img src="./image/profile-pic.png" alt="Profile Picture" class="profile-picture">
+                <ul class="dropdown-menu">
+                  <li><a href="#/profile/:id">Pengaturan Profil</a></li>
+                  <li><button id="logoutbtn">Keluar</button></li>
+                </ul>
+              </li>
+            </ul>
           </div>
+          <div class="nav_login">
+              <a href="#/login" id="loginbtn" style="display: none;">Masuk</a>
+            </div>
         </div>
       </nav>
       <!-- Logout Confirmation Modal -->
@@ -73,14 +83,14 @@ class headerBar extends HTMLElement {
 
   updateLoginState() {
     const loginBtn = this.querySelector('#loginbtn');
-    const logoutBtn = this.querySelector('#logoutbtn');
+    const profileDropdown = this.querySelector('.nav-profile');
 
     if (localStorage.getItem('isLoggedIn') === 'true') {
       loginBtn.style.display = 'none';
-      logoutBtn.style.display = 'block';
+      profileDropdown.style.display = 'block';
     } else {
       loginBtn.style.display = 'block';
-      logoutBtn.style.display = 'none';
+      profileDropdown.style.display = 'none';
     }
   }
 
