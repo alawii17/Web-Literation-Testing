@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import Swal from 'sweetalert2';
 import AuthApi from '../../data/auth-api';
 
 const ProfilePage = {
@@ -52,9 +54,21 @@ const ProfilePage = {
         try {
           const userId = localStorage.getItem('userId');
           await AuthApi.updateProfile(userId, profileData);
-          alert('Profile updated successfully!');
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Profile berhasil diperbaharui',
+            showConfirmButton: false,
+            timer: 1500,
+          });
         } catch (error) {
-          alert('Failed to update profile. Please try again.');
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Profile gagal diperbaharui',
+            showConfirmButton: false,
+            timer: 1500,
+          });
           console.error('Error updating profile:', error);
         }
       });

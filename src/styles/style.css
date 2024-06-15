@@ -1539,3 +1539,13 @@ button.hamburger-menu {
 .footer-section.active {
     filter: blur(15px); 
 }
+
+/* My swal */
+.my-swal {
+  width: 400px;
+  height: 300px; /* Atur tinggi sesuai kebutuhan Anda */
+}
+
+.my-swal .swal2-popup {
+  font-size: 1.2em; /* Atur ukuran font jika diperlukan */
+}

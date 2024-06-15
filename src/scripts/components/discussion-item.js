@@ -1,5 +1,8 @@
+/* eslint-disable indent */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable max-len */
 /* eslint-disable camelcase */
+import Swal from 'sweetalert2';
 import DiscussionApi from '../data/discussion-Api';
 
 class DiscussionItem extends HTMLElement {
@@ -19,22 +22,22 @@ class DiscussionItem extends HTMLElement {
     });
 
     this.innerHTML = `
-  <div class="discussion-item">
-    <div class="discussion-header">
-      <img src="./image/profile-pic.png" alt="User Icon" class="user-icon">
-      <div class="user-info">
-        <span class="discussion-username">${username}</span>
-        <span class="discussion-date">${formattedDate}</span>
+      <div class="discussion-item">
+        <div class="discussion-header">
+          <img src="./image/profile-pic.png" alt="User Icon" class="user-icon">
+          <div class="user-info">
+            <span class="discussion-username">${username}</span>
+            <span class="discussion-date">${formattedDate}</span>
+          </div>
+        </div>
+        <div class="discussion-content">${content}</div>
+        <button class="reply-button">Balas</button>
+        <button class="toggle-replies-button">Lihat Balasan</button>
+        <button class="delete-replies-button">Hapus</button>
+        <div class="reply-form-container" style="display: none;"></div>
+        <div class="replies" style="display: none;"></div>
       </div>
-    </div>
-    <div class="discussion-content">${content}</div>
-    <button class="reply-button">Balas</button>
-    <button class="toggle-replies-button">Lihat Balasan</button>
-    <button class="delete-replies-button">Hapus</button>
-    <div class="reply-form-container" style="display: none;"></div>
-    <div class="replies" style="display: none;"></div>
-  </div>
-`;
+    `;
 
     this.querySelector('.reply-button').addEventListener('click', () => {
       this.toggleReplyForm();
@@ -77,9 +80,15 @@ class DiscussionItem extends HTMLElement {
       const content = replyForm.querySelector('textarea').value;
       try {
         await this.addReply(content);
-        replyForm.reset(); // Reset form setelah berhasil menambahkan balasan
+        replyForm.reset();
       } catch (error) {
-        alert(`Gagal menambahkan balasan: ${error.message}`);
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          title: `Gagal menambahkan balasan, ${error}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       }
     });
 
@@ -87,12 +96,36 @@ class DiscussionItem extends HTMLElement {
   }
 
   async addReply(content) {
+    const userId = localStorage.getItem('userId');
+    if (!userId) {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Anda harus login terlebih dahulu',
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      return;
+    }
+
     try {
-      await DiscussionApi.addReply(this._discussion.id, { content });
-      alert('Balasan berhasil ditambahkan!');
+      await DiscussionApi.addReply(this._discussion.id, { userId, content });
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Balasan berhasil ditambahkan',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       this.loadReplies();
     } catch (error) {
-      alert(`Gagal menambahkan balasan: ${error.message}`);
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: `Gagal menambahkan balasan, ${error}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   }
 
@@ -101,7 +134,13 @@ class DiscussionItem extends HTMLElement {
       const replies = await DiscussionApi.getReplies(this._discussion.id);
       this.renderReplies(replies);
     } catch (error) {
-      alert(`Gagal memuat balasan: ${error.message}`);
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: `Gagal memuat balasan: ${error}`,
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
   }
 
@@ -117,10 +156,10 @@ class DiscussionItem extends HTMLElement {
           <div class="user-info">
             <span class="reply-username">${reply.username}</span>
             <span class="reply-date">${new Date(reply.created_at).toLocaleDateString('id-ID', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })}</span>
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}</span>
           </div>
         </div>
         <div class="reply-content">${reply.content}</div>
@@ -146,25 +185,48 @@ class DiscussionItem extends HTMLElement {
 
   async deleteDiscussion() {
     const currentUserId = localStorage.getItem('userId');
+    const isOwner = currentUserId === this._discussion.user_id.toString();
 
-    // Memeriksa apakah pengguna saat ini adalah pemilik diskusi
-    const isOwner = currentUserId === this._discussion.user_id.toString(); // Mengonversi user_id menjadi string
-
-    // Menampilkan pesan kesalahan jika pengguna bukan pemilik diskusi
     if (!isOwner) {
-      alert('Anda tidak memiliki izin untuk menghapus diskusi ini.');
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Anda tidak bisa menghapus diskusi ini',
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return;
     }
 
-    if (confirm('Apakah Anda yakin ingin menghapus diskusi ini?')) {
-      try {
-        await DiscussionApi.deleteDiscussion(this._discussion.id);
-        alert('Diskusi berhasil dihapus!');
-        this.remove();
-      } catch (error) {
-        alert(`Gagal menghapus diskusi: ${error.message}`);
+    Swal.fire({
+      title: 'Apakah Anda yakin?',
+      text: 'Anda tidak akan dapat mengembalikan ini!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ya, hapus diskusi ini!',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await DiscussionApi.deleteDiscussion(this._discussion.id);
+          Swal.fire({
+            title: 'Dihapus!',
+            text: 'Diskusi berhasil dihapus.',
+            icon: 'success',
+            timer: 1500,
+            showConfirmButton: false,
+          });
+          this.remove();
+        } catch (error) {
+          Swal.fire({
+            title: 'Gagal',
+            text: `Gagal menghapus diskusi: ${error.message}`,
+            icon: 'error',
+          });
+        }
       }
-    }
+    });
   }
 }
 

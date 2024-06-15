@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import Swal from 'sweetalert2';
+
 class headerBar extends HTMLElement {
   constructor() {
     super();
@@ -106,7 +109,15 @@ class headerBar extends HTMLElement {
 
   logout() {
     localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('userId');
     window.location.hash = '#/home';
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Logout Berhasil',
+      showConfirmButton: false,
+      timer: 1500,
+    });
     this.updateLoginState();
   }
 }

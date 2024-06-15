@@ -33,6 +33,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "sweetalert2": "^11.11.1"
   }
 }
