@@ -159,7 +159,7 @@ const testInitiator = async () => {
     resultBox.classList.add('active');
 
     const scoreText = document.querySelector('.score-text');
-    scoreText.textContent = `Your score ${userScore} out of ${questions.length}`;
+    scoreText.textContent = `Jawaban yang benar ${userScore} dari ${questions.length}`;
 
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
