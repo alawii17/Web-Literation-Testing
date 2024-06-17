@@ -194,8 +194,7 @@ nav > .wrapper {
 
 /* Profile */
 .nav-profile {
-  position: relative;
-  display: inline-block;
+  display: block;
   padding-top: 10px;
 }
 
@@ -526,9 +525,11 @@ button.hamburger-menu > i.icon-close {
   margin: 0;
 }
 
-.faq-item .question .toggle-icon {
+.faq-item .question button.toggle-icon {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+  border: none;
+  background: transparent;
 }
 
 .faq-item .answer {
@@ -1717,4 +1718,22 @@ button.delete-replies-button:hover {
 
 .my-swal .swal2-popup {
   font-size: 1.2em;
+}
+
+/* Skip to Content */
+.skip-to-content {
+  font-family: "Nunito Sans", sans-serif;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #ebb22f;
+  color: white;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  top: 0;
 }

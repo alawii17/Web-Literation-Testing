@@ -14,14 +14,14 @@ class headerBar extends HTMLElement {
       <nav id="navbar">
         <div class="wrapper">
           <div class="nav-logo">
-            <img src="./image/Logo.png" alt="Logo Lite">
+            <img tabindex="0" src="./image/Logo.png" alt="Logo Lite">
           </div>
           <div class="nav-menu">  
             <ul>
-              <li><a href="#/home">Beranda</a></li>
-              <li><a href="#/literationtest">Tes Literasi</a></li>
-              <li><a href="#/forumdiskusi">Forum Diskusi</a></li>
-              <li><a href="#/aboutus">Tentang Kami</a></li>
+              <li tabindex="0"><a href="#/home">Beranda</a></li>
+              <li tabindex="0"><a href="#/literationtest">Tes Literasi</a></li>
+              <li tabindex="0"><a href="#/forumdiskusi">Forum Diskusi</a></li>
+              <li tabindex="0"><a href="#/aboutus">Tentang Kami</a></li>
             </ul>
           </div>
           <div class="nav-side">
@@ -44,7 +44,7 @@ class headerBar extends HTMLElement {
               <a href="#/login" id="loginbtn" style="display: none;">Masuk</a>
             </div>
         </div>
-          </div>
+        </div>
       </nav>
       <div id="logoutModal" class="modal">
         <div class="modal-content">

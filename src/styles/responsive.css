@@ -100,8 +100,8 @@
 
   .wrapper > .nav-side {
     display: flex;
-    justify-content: space-around;
-    width: 20%;
+    justify-content: space-evenly;
+    width: 30%;
   }
 
   button.hamburger-menu {
@@ -285,11 +285,20 @@
   .wrapper > .nav_login {
     width: 40%;
   }
+
+  .wrapper > .nav-side {
+    width: 40%;
+  }
 }
+
 
 @media only screen and (max-width: 425px) {
   /* Nav */
   .wrapper > .nav_login {
+    width: 50%;
+  }
+
+  .wrapper > .nav-side {
     width: 50%;
   }
 

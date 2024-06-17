@@ -5,67 +5,70 @@ const home = {
     return `
     <section class="hero-section">
       <div class="hero-description">
-        <h1>Literation <span>Testing</span></h1>
-        <p>Selamat datang! 
+        <h1 tabindex="0">Literation <span>Testing</span></h1>
+        <p tabindex="0">Selamat datang! 
           Di sini, kami mempercayai bahwa literasi adalah 
           kunci untuk membuka pintu menuju pengetahuan 
           dan pemahaman yang mendalam. Mari uji dan tingkatkan 
           kemampuan literasi Anda bersama kami.
         </p>
-        <a href="#/literationtest" class="button">Cari Tahu Sekarang</a>
+        <a tabindex="0" href="#/literationtest" class="button">Cari Tahu Sekarang</a>
       </div>
       <div class="hero-image">
-        <img src="./image/vector-Literasi.png" alt="vector-beranda">
+        <img tabindex="0" src="./image/vector-Literasi.png" alt="vector-beranda">
       </div>
     </section>
     <section class="test-introduction-section">
       <div class="test-image">
-        <img src="./image/Vector-Test.png" alt="vector-test-introduction">
+        <img tabindex="0" src="./image/Vector-Test.png" alt="vector-test-introduction">
       </div>
       <div class="test-description">
-        <h1>Macam - macam <span>Fitur</span></h1>
-        <p>Dengan fitur Tes Literasi dan Forum diskusi, kamu bisa mengukur sejauh mana tingkat 
+        <h1 tabindex="0">Macam - macam <span>Fitur</span></h1>
+        <p tabindex="0">Dengan fitur Tes Literasi dan Forum diskusi, kamu bisa mengukur sejauh mana tingkat 
            Literasimu dan mengasahnya. 
         </p>
       </div>
     </section>
     <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
+      <h2 tabindex="0">Pertanyaan Umum</h2>
       <div class="faq-container">
-        <div class="faq-item">
+        <div tabindex="0" class="faq-item">
           <div class="question">
-            <h3>What is the purpose of this website?</h3>
-            <span class="toggle-icon">+</span>
+            <h3 tabindex="0">Apa tujuan dari website ini?</h3>
+            <button tabindex="0" class="toggle-icon">+</button>
           </div>
           <div class="answer">
-            <p>This website is designed to help users improve their literacy skills through interactive tests and resources.</p>
+            <p tabindex="0">Website ini di desain untuk membantu pengguna menguji tingkat literasi.</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="question">
-            <h3>How can I take the literacy test?</h3>
-            <span class="toggle-icon">+</span>
+            <h3 tabindex="0">Bagaimana saya mengakases fitur tes literasi?</h3>
+            <button tabindex="0" class="toggle-icon">+</button>
           </div>
           <div class="answer">
-            <p>To take the literacy test, simply navigate to the "Literacy Test" section from the main menu and follow the instructions provided.</p>
+            <p tabindex="0">Caranya adalah langsung mengarah ke halaman Tes Literasi dan mengikuti intruksi 
+            di halaman tersebut dan untuk fitur tes literasi dapat di akses tanpa harus login terlebih dahulu.</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="question">
-            <h3>Can I review my test results?</h3>
-            <span class="toggle-icon">+</span>
+            <h3 tabindex="0">Apakah hasil tes nya bisa dilihat?</h3>
+            <button tabindex="0" class="toggle-icon">+</button>
           </div>
           <div class="answer">
-            <p>Yes, you can review your test results immediately after completing the test. Detailed feedback and scores will be provided.</p>
+            <p tabindex="0">Iya, hasil tes akan langsung keluar saat soal tes sudah diisi semua dan selain hasil tes, 
+            pengguna juga mendapatkan feedback berdasarkan hasil tes tersebut.</p>
           </div>
         </div>
         <div class="faq-item">
           <div class="question">
-            <h3>Is my data secure on this website?</h3>
-            <span class="toggle-icon">+</span>
+            <h3 tabindex="0">Bagaimana cara membuat Diskusi di fitur Forum Diskusi?</h3>
+            <button tabindex="0" class="toggle-icon">+</button>
           </div>
           <div class="answer">
-            <p>We take your privacy and data security seriously. All your personal information is encrypted and stored securely.</p>
+            <p tabindex="0">Caranya langsung mengarah ke halaman Forum diskusi dan untuk fitur Forum Diskusi,
+            Pengguna harus Login terlebih dahulu untuk bisa mengaksesnya.</p>
           </div>
         </div>
       </div>

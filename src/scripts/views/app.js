@@ -20,15 +20,26 @@ class App {
   async renderPage() {
     const url = UrlParser.parserActiveUrlWithCombiner();
     const page = routes[url];
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
 
-    if (page && typeof page.render === 'function') {
-      this._content.innerHTML = await page.render();
-      if (typeof page.afterRender === 'function') {
-        await page.afterRender();
+    const skipToContent = document.querySelector('#skip-to-content');
+    skipToContent.addEventListener('click', (event) => {
+      event.preventDefault();
+      this._onClickSkipContent();
+    });
+    skipToContent.addEventListener('keyup', (event) => {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        this._onClickSkipContent();
       }
-    } else {
-      console.error(`Page with URL '${url}' not found or render method is not a function.`);
-    }
+    });
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  _onClickSkipContent() {
+    document.querySelector('#main-content').focus();
+    document.querySelector('#main-content').blur();
   }
 }
 
