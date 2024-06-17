@@ -79,28 +79,34 @@
   .register > .register-form > p > a {
     font-size: 0.9rem;
   }
+
+  /* About Us */
+  .about-us-content img {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width: 850px) {
   /* Navbar */
-  .wrapper > .nav-login {
+  .nav-side > .nav-login {
     display: flex;
   }
 
-  .wrapper > .nav-profie {
-    width: 40%;
-    display: inline-block;
-    position: absolute;
-    padding-right: 30px;
-    padding-top: 5px;
+  .nav-side > .nav-profie {
+    display: flex;
+    padding-top: 10px;
+  }
+
+  .wrapper > .nav-side {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
   }
 
   button.hamburger-menu {
-    display: block;
-    position: absolute;
-    right: 0;
-    padding-right: 10px;
-    padding-top: 5px;
+    display: flex;
+    padding-top: 15px;
   }
 
   .tampil > ul {
@@ -137,11 +143,6 @@
   .nav-menu.tampil > ul > li > a {
     display: block;
     color: #fff;
-  }
-
-  /* Profile */
-  .nav-profile {
-    padding-left: 70%;
   }
 
   /* Register */
@@ -197,11 +198,21 @@
     display: flex;
     justify-content: center;
   }
+
+  /* About Us */
+  .about-us-content img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-us-content > .DeskripsiTentang {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   /* Home */
-  .hero-section{
+  .hero-section {
     height: 75vh;
     display: flex;
     align-items: center;
@@ -252,16 +263,27 @@
   .footer-section .footer-sosmed {
     margin-top: 10px;
   }
+
+  /* About Us */
+  .about-us-content,
+  .team-content {
+    padding: 20px;
+  }
+
+  .about-us-content img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .team-card {
+    flex: 1 0 calc(50% - 20px);
+  }
 }
 
 @media only screen and (max-width: 600px) {
   /* Nav */
   .wrapper > .nav_login {
     width: 40%;
-  }
-
-  .nav-profile {
-    padding-left: 60%;
   }
 }
 
@@ -271,7 +293,9 @@
     width: 50%;
   }
 
-  .nav-profile {
-    padding-left: 50%;
+  /* About Us */
+  .team-card {
+    flex: 1 0 calc(100% - 20px);
+    margin: 10px 0;
   }
 }

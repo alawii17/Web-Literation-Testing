@@ -198,6 +198,17 @@ const testInitiator = async () => {
 
     feedbackContainer.textContent = feedbackMessage;
   }
+
+  const shareWhatsAppBtn = document.getElementById('share-whatsapp');
+  shareWhatsAppBtn.addEventListener('click', shareOnWhatsApp);
+
+  function shareOnWhatsApp() {
+    const testResult = `Saya baru saja menyelesaikan Tes Literasi dan hasil saya adalah ${userScore} dari ${questions.length}.`;
+    const url = 'https://example.com/hasil-tes';
+    const message = encodeURIComponent(`${testResult} Ayo uji literasimu juga di: ${url}`);
+    const whatsappUrl = `https://wa.me/?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  }
 };
 
 export default testInitiator;

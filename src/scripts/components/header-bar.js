@@ -16,18 +16,19 @@ class headerBar extends HTMLElement {
           <div class="nav-logo">
             <img src="./image/Logo.png" alt="Logo Lite">
           </div>
-          <button id="hamburger-menu" class="hamburger-menu">
-            <i class="fa-solid fa-bars icon-bars"></i>
-            <i class="fa-solid fa-xmark icon-close"></i>
-          </button>
           <div class="nav-menu">  
             <ul>
               <li><a href="#/home">Beranda</a></li>
               <li><a href="#/literationtest">Tes Literasi</a></li>
               <li><a href="#/forumdiskusi">Forum Diskusi</a></li>
-              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#/aboutus">Tentang Kami</a></li>
             </ul>
           </div>
+          <div class="nav-side">
+          <button id="hamburger-menu" class="hamburger-menu">
+            <i class="fa-solid fa-bars icon-bars"></i>
+            <i class="fa-solid fa-xmark icon-close"></i>
+          </button>
           <div class="nav-profile" style="display: none;">
             <ul>
               <li class="profile-dropdown">
@@ -43,8 +44,8 @@ class headerBar extends HTMLElement {
               <a href="#/login" id="loginbtn" style="display: none;">Masuk</a>
             </div>
         </div>
+          </div>
       </nav>
-      <!-- Logout Confirmation Modal -->
       <div id="logoutModal" class="modal">
         <div class="modal-content">
           <p>Apakah Anda yakin ingin keluar?</p>

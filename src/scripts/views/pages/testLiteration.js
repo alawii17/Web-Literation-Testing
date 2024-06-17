@@ -43,6 +43,12 @@ const literationTest = {
                   <button class="tryAgain-btn">Coba lagi</button>
                   <button class="goHome-btn">Kembali</button>
                 </div>
+                <div class="share-buttons">
+                    <button id="share-whatsapp" class="share-btn">
+                      <i class="fa-brands fa-whatsapp"></i>
+                      Bagikan hasil tes
+                    </button>
+                  </div>
               </div>
         </section>
     </div>

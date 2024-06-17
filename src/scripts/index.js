@@ -7,6 +7,7 @@ import './components/discussion-list';
 import './components/discussion-item';
 import './components/footer';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
@@ -29,4 +30,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   updateNavbarLoginState();
+  swRegister();
 });
