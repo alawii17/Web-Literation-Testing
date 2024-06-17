@@ -1,8 +1,248 @@
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 1200px) {
+}
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 1035px) {
+  /* login */
+  .login > .login-form > p,
+  .login > .login-form > p > a {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 982px) {
+  /* navbar */
+  .wrapper > .nav-menu {
+    width: 80%;
+    padding-top: 5px;
+  }
+
+  .wrapper > .nav-menu > ul > li {
+    display: inline;
+    padding: 0;
+  }
+
+  .wrapper > .nav-menu > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Home */
+  .hero-section {
+    height: 85vh;
+  }
+
+  .hero-section > .hero-description {
+    width: 50%;
+    padding-left: 40px;
+  }
+
+  .hero-section > .hero-description > h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section > .hero-description > h1 > span {
+    font-size: 1.5rem;
+  }
+
+  .hero-section > .hero-description > p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+    font-size: 0.9rem;
+  }
+
+  .hero-section > .hero-image img {
+    width: 90%;
+  }
+
+  .test-introduction-section > .test-description > h1 {
+    font-size: 1.5rem;
+  }
+
+  .test-introduction-section > .test-description > p {
+    font-size: 0.8rem;
+    text-align: justify;
+    padding-right: 15px;
+  }
+
+  .test-introduction-section > .test-description > h1 > span {
+    font-size: 1.5rem;
+  }
+
+  .test-introduction-section > .test-image img {
+    width: 90%;
+  }
+
+  /* Register */
+  .register > .register-form > p,
+  .register > .register-form > p > a {
+    font-size: 0.9rem;
+  }
+
+  /* About Us */
+  .about-us-content img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  /* Navbar */
+  .nav-side > .nav-login {
+    display: flex;
+  }
+
+  .nav-side > .nav-profie {
+    display: flex;
+    padding-top: 10px;
+  }
+
+  .wrapper > .nav-side {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+  }
+
+  button.hamburger-menu {
+    display: flex;
+    padding-top: 15px;
+  }
+
+  .tampil > ul {
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+
+  .wrapper > .nav-menu {
+    display: none;
+  }
+
+  .wrapper > .tampil {
+    display: inline-block;
+    color: #fff;
+  }
+
+  .nav-menu.tampil > ul {
+    z-index: 9999;
+  }
+
+  .nav-menu.tampil > ul > li {
+    margin-top: 10px;
+    padding-top: 20px;
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-menu.tampil > ul > li > a {
+    display: block;
+    color: #fff;
+  }
+
+  /* Register */
+  .register > .register-image {
+    display: none;
+  }
+
+  .register > .register-form {
+    width: 100%;
+  }
+
+  .register-image-buttonBack > a {
+    border: 2px solid #eeeeee;
+    color: #eee;
+  }
+
+  .register-image-buttonBack > a:hover {
+    background-color: #eee;
+    color: #ebb22f;
+  }
+
+  .register > .register-form > p {
+    width: 60%;
+  }
+
+  /* Login */
+  .login > .login-image {
+    display: none;
+  }
+
+  .login > .login-form {
+    width: 100%;
+  }
+
+  .login-image-buttonBack > a {
+    border: 2px solid #eeeeee;
+    color: #eee;
+  }
+
+  .login-image-buttonBack > a:hover {
+    background-color: #eee;
+    color: #ebb22f;
+  }
+
+  .login > .login-form > p {
+    width: 60%;
+  }
+
+  /* Test Section */
+  .wrapper > .test-entry > .test-entry-content > p {
+    width: 80%;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* About Us */
+  .about-us-content img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-us-content > .DeskripsiTentang {
+    width: 80%;
+  }
+}
 
 @media only screen and (max-width: 750px) {
+  /* Home */
+  .hero-section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-section > .hero-image {
+    display: none;
+  }
+
+  .hero-section > .hero-description {
+    width: 80%;
+  }
+
+  .test-introduction-section > .test-image {
+    display: none;
+  }
+
+  .test-introduction-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .test-introduction-section > .test-description {
+    width: 80%;
+  }
+
+  /* Footer */
   .footer-section .footer-top {
     flex-direction: column;
     align-items: center;
@@ -23,128 +263,48 @@
   .footer-section .footer-sosmed {
     margin-top: 10px;
   }
-}
 
-@media only screen and (max-width: 850px) {
-    .wrapper > .nav-login {
-        display: flex;
-    }
-
-    .wrapper > .nav-menu {
-      width: 60%;
-    }
-
-    button.hamburger-menu {
-        display: block;
-        position: absolute;
-        right: 0;
-        padding-right: 10px;
-        padding-top: 5px;
-      }
-
-    .tampil > ul {
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 100px;
-        left: 0;
-      }
-    
-      .nav-menu {
-        display: none;
-      }
-    
-      .tampil {
-        display: inline-block;
-        color: #fff;
-      }
-
-      .tampil > ul > li {
-        margin-top: 10px;
-        padding-top: 20px;
-        min-width: 44px;
-        min-height: 44px;
-        width: 100%;
-      }
-
-      .wrapper > .nav-menu > ul > li > a {
-        color: #fff;
-      }
-
-      .wrapper > .nav-menu > ul > li > a:hover::after {
-        transform: scaleX(30);
-      }
-}
-
-@media only screen and (max-width: 982px){
-  .wrapper > .nav-menu {
-    width: 70%;
-    padding-top: 5px;
+  /* About Us */
+  .about-us-content,
+  .team-content {
+    padding: 20px;
   }
 
-  .wrapper > .nav-menu > ul > li {
-    display: inline;
-    padding: 0;
+  .about-us-content img {
+    width: 200px;
+    height: 200px;
   }
 
-  .wrapper > .nav-menu > ul > li > a {
-    display: inline-block;
-    padding: 10px;
-    font-size: 0.9rem;
+  .team-card {
+    flex: 1 0 calc(50% - 20px);
   }
-
-  .hero-section {
-    height: 85vh;
 }
 
-.hero-section > .hero-description {
-    width: 50%;
-    padding-left: 40px;
-}
-
-.hero-section > .hero-description > h1 {
-    font-size: 1.5rem;
-}
-
-.hero-section > .hero-description > h1 > span {
-    font-size: 1.5rem;
-}
-
-.hero-section > .hero-description > p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: justify;
-    font-size: 0.9rem;
-}
-
-.hero-section > .hero-image {
+@media only screen and (max-width: 600px) {
+  /* Nav */
+  .wrapper > .nav_login {
     width: 40%;
+  }
+
+  .wrapper > .nav-side {
+    width: 40%;
+  }
 }
 
-.hero-section > .hero-image img {
-  width: 90%;
-}
 
-.test-introduction-section > .test-description > h1 {
-  font-size: 1.5rem;
-}
+@media only screen and (max-width: 425px) {
+  /* Nav */
+  .wrapper > .nav_login {
+    width: 50%;
+  }
 
-.test-introduction-section > .test-description > p {
-  font-size: 0.8rem;
-  text-align: justify;
-  padding-right: 15px;
-}
+  .wrapper > .nav-side {
+    width: 50%;
+  }
 
-.test-introduction-section > .test-description > h1 > span {
-  font-size: 1.5rem;
+  /* About Us */
+  .team-card {
+    flex: 1 0 calc(100% - 20px);
+    margin: 10px 0;
+  }
 }
-
-.test-introduction-section > .test-image img {
-  width: 90%;
-}
-}
-
-@media only screen and (max-width: 1000px) {}
-
-@media only screen and (max-width: 1200px) {}
