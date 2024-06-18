@@ -204,7 +204,7 @@ const testInitiator = async () => {
 
   function shareOnWhatsApp() {
     const testResult = `Saya baru saja menyelesaikan Tes Literasi dan hasil saya adalah ${userScore} dari ${questions.length}.`;
-    const url = 'https://example.com/hasil-tes';
+    const url = 'https://literation-testing.vercel.app/';
     const message = encodeURIComponent(`${testResult} Ayo uji literasimu juga di: ${url}`);
     const whatsappUrl = `https://wa.me/?text=${message}`;
     window.open(whatsappUrl, '_blank');
