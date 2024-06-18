@@ -34,13 +34,13 @@ const aboutUs = {
             <h3>Muhammad Rafli Ardiansyah</h3>
             <p>Project Manager</p>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/"
+              <a href="https://www.linkedin.com/in/muhammad-rafly-ardiansyah-a9144b1ba/"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
-              <a href="https://github.com/"
+              <a href="https://github.com/raflydeveloper"
                 ><i class="fa-brands fa-square-github"></i
               ></a>
-              <a href="https://www.instagram.com/"
+              <a href="https://www.instagram.com/muhammadraflyy.a?igsh=ZmF6dDV5M3M1cGl2"
                 ><i class="fa-brands fa-square-instagram"></i
               ></a>
             </div>
@@ -69,10 +69,10 @@ const aboutUs = {
             <h3>Yanyan Nayla Damayanti</h3>
             <p>Back-End Developer</p>
             <div class="social-icons">
-              <a href="https://www.linkedin.com/" target="_blank"
+              <a href="https://www.linkedin.com/in/yanyannaylad/" target="_blank"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
-              <a href="https://github.com/" target="_blank"
+              <a href="https://github.com/Nayla-11" target="_blank"
                 ><i class="fa-brands fa-square-github"></i
               ></a>
               <a href="https://www.instagram.com/" target="_blank"

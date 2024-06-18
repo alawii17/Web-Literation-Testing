@@ -268,6 +268,10 @@
     height: 30vh;
   }
 
+  .forum-page {
+    width: 65%;
+  }
+
   .test-introduction-section > .test-description {
     width: 80%;
   }
@@ -282,6 +286,20 @@
 
   .test-section {
     height: 160%;
+  }
+
+  .forum-page {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .forum-diskusi > h1 {
+    font-size: 24px;
+  }
+
+  #discussionForm button,
+  .reply-form button {
+    width: 100%;
   }
 
   /* Footer */
@@ -393,7 +411,6 @@
     flex-direction: column;
   }
 }
-
 
 @media only screen and (max-width: 425px) {
   /* Nav */
