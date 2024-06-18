@@ -212,8 +212,8 @@ nav > .wrapper {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 60px;
+  margin-right: 0;
   background-color: white;
   min-width: 150px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -709,11 +709,11 @@ section.test-entry {
 
 /* Test Section */
 .test-section {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background: #393e46;
   display: flex;
   justify-content: center;
