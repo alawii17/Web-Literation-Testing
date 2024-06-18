@@ -64,7 +64,7 @@ module.exports = {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('http://localhost:8083'),
+          urlPattern: ({ url }) => url.href.startsWith('https://web-lteration-testing-backend-production-a20e.up.railway.app'),
           handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'lite-api',

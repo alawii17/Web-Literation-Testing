@@ -4,6 +4,7 @@ class footerSection extends HTMLElement {
     this.setAttribute('custom-attribute', 'value-custom-attribute');
     this.innerHTML = `
     <section class="footer-section" id="footer">
+    <div class="wrapper">
         <div class="footer-top">
           <div class="footer-logo">
             <img tabindex="0" src="./image/Logo.png" alt="Logo-Lite">
@@ -34,6 +35,7 @@ class footerSection extends HTMLElement {
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook"></i>
           </div>
+        </div>
         </div>
       </section>
           `;

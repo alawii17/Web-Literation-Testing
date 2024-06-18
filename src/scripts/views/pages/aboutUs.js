@@ -28,11 +28,11 @@ const aboutUs = {
           </p>
           <div class="team-card">
             <img
-              src="https://via.placeholder.com/150"
+              src="./image/pic-rafli.png"
               alt="Muhammad Rafli Ardiansyah"
             />
             <h3>Muhammad Rafli Ardiansyah</h3>
-            <p>Full-Stack Web Developer</p>
+            <p>Project Manager</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/"
                 ><i class="fa-brands fa-linkedin"></i
@@ -46,28 +46,9 @@ const aboutUs = {
             </div>
           </div>
           <div class="team-card">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Yanyan Nayla Damayanti"
-            />
-            <h3>Yanyan Nayla Damayanti</h3>
-            <p>Full-Stack Web Developer</p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/" target="_blank"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/" target="_blank"
-                ><i class="fa-brands fa-square-github"></i
-              ></a>
-              <a href="https://www.instagram.com/" target="_blank"
-                ><i class="fa-brands fa-square-instagram"></i
-              ></a>
-            </div>
-          </div>
-          <div class="team-card">
             <img src="./image/pic-alawi.png" alt="Muhammad Alawi Alatas" />
             <h3>Muhammad Alawi Alatas</h3>
-            <p>Full-Stack Web Developer</p>
+            <p>Front-End Developer</p>
             <div class="social-icons">
               <a href="https://www.linkedin.com/in/muhammad-alawi-alatas-2b521b218/"
                 ><i class="fa-brands fa-linkedin"></i
@@ -76,6 +57,25 @@ const aboutUs = {
                 ><i class="fa-brands fa-square-github"></i
               ></a>
               <a href="https://www.instagram.com/alawi_alatas15/"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="team-card">
+            <img
+              src="./image/pic-nayla.png"
+              alt="Yanyan Nayla Damayanti"
+            />
+            <h3>Yanyan Nayla Damayanti</h3>
+            <p>Back-End Developer</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/" target="_blank"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
                 ><i class="fa-brands fa-square-instagram"></i
               ></a>
             </div>

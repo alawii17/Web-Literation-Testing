@@ -1,4 +1,22 @@
 @media only screen and (max-width: 1200px) {
+  .popup-info {
+    width: 450px;
+  }
+  .test-section .test-box {
+    width: 450px;
+  }
+
+  .test-box .question-text {
+    font-size: 20px;
+  }
+
+  .test-header span {
+    font-size: 17px;
+  }
+
+  .test-section .result-box {
+    width: 450px;
+  }
 }
 
 @media only screen and (max-width: 1035px) {
@@ -6,6 +24,10 @@
   .login > .login-form > p,
   .login > .login-form > p > a {
     font-size: 0.9rem;
+  }
+
+  .profile-form > .form-group {
+    width: 40%;
   }
 }
 
@@ -72,6 +94,10 @@
 
   .test-introduction-section > .test-image img {
     width: 90%;
+  }
+
+  .profile-form > .form-group {
+    width: 50%;
   }
 
   /* Register */
@@ -199,6 +225,10 @@
     justify-content: center;
   }
 
+  .profile-form > .form-group {
+    width: 45%;
+  }
+
   /* About Us */
   .about-us-content img {
     width: 300px;
@@ -240,6 +270,18 @@
 
   .test-introduction-section > .test-description {
     width: 80%;
+  }
+
+  .profile-form > .form-group {
+    width: 50%;
+  }
+
+  .profile-form > .submit-button {
+    width: 40%;
+  }
+
+  .test-section {
+    height: 160%;
   }
 
   /* Footer */
@@ -289,6 +331,67 @@
   .wrapper > .nav-side {
     width: 40%;
   }
+
+  .popup-info {
+    width: 300px;
+  }
+
+  .popup-info h2{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .popup-info .btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-info .btn-group .info-btn.continue-btn {
+    margin-top: 10px;
+  }
+
+  .test-section .test-box {
+    width: 300px;
+  }
+
+  .test-box .question-text {
+    font-size: 15px;
+  }
+
+  .option-list .option span {
+    font-size: 12px;
+  }
+
+  .test-section .result-box {
+    width: 300px;
+  }
+
+  .test-section .result-box h2 {
+    font-size: 40px;
+  }
+
+  .percentage-container .circular-progress::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .percentage-container .circular-progress {
+    width: 230px;
+    height: 230px;
+  }
+
+  .percentage-container .score-text {
+    font-size: 20px;
+  }
+
+  .result-box > .feedback-container {
+    font-size: 20px;
+  }
+
+  .result-box > .buttons {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
@@ -300,6 +403,14 @@
 
   .wrapper > .nav-side {
     width: 50%;
+  }
+
+  .profile-form > .form-group {
+    width: 65%;
+  }
+
+  .profile-form > .submit-button {
+    width: 55%;
   }
 
   /* About Us */
