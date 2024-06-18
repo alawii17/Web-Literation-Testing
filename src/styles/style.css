@@ -1011,10 +1011,16 @@ section.test-entry {
 /* Forum Diskusi */
 .forum-page {
   margin: auto;
-  width: 55%;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
   margin-top: 20px;
   min-height: 100vh;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .forum-diskusi {
   margin: 20px;
 }
@@ -1024,8 +1030,10 @@ section.test-entry {
 }
 
 .forum-diskusi > h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00adb5;
+  text-align: center;
 }
 
 #discussionForm {
@@ -1045,50 +1053,53 @@ section.test-entry {
   height: 100px;
   margin-bottom: 10px;
   border: none;
-  padding: 10px 20px;
+  padding: 15px;
   margin-bottom: 20px;
-  border-radius: 20px;
-  outline-color: #00adb5;
-  box-shadow: 0px 2px 5px #333;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  resize: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#discussionForm textarea:focus,
+.reply-form textarea:focus {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 #create-forum {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  min-width: 44px;
-  min-height: 44px;
-  width: 250px;
-  padding: 10px;
-  margin: 20px;
+  padding: 10px 20px;
+  margin: 20px auto;
   background-color: #00adb5;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 #create-forum:hover {
   background: #04858b;
 }
 
-#discussionForm button {
+#discussionForm button,
+.reply-form button {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
   margin: auto;
-  min-width: 44px;
-  min-height: 44px;
-  width: 250px;
+  padding: 10px 20px;
   background-color: #00adb5;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 #discussionForm button:hover,
@@ -1102,11 +1113,16 @@ section.test-entry {
 
 .discussion-item {
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0px 2px 5px #333;
-  padding: 10px;
-  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.discussion-item:hover {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 .replies {
@@ -1115,9 +1131,9 @@ section.test-entry {
   margin-bottom: 10px;
   padding-bottom: 20px;
   border: none;
-  border-radius: 20px;
-  background: #eee;
-  box-shadow: 0px 2px 5px #333;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
 .reply-form-container > form {
@@ -1127,10 +1143,17 @@ section.test-entry {
 }
 
 .reply-form-container > form > textarea {
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 10px;
+  padding: 15px;
   margin-bottom: 10px;
-  outline-color: #00adb5;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  resize: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply-form-container > form > textarea:focus {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
 }
 
 .reply-form-container > form > button {
@@ -1138,15 +1161,14 @@ section.test-entry {
   margin: auto;
   justify-content: center;
   align-items: center;
-  min-width: 44px;
-  min-height: 44px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #fff;
   font-weight: bold;
   background: #00adb5;
-  width: 100px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 .reply-form-container > form > button:hover {
@@ -1158,19 +1180,17 @@ button.toggle-replies-button,
 button.delete-replies-button {
   border: 1px solid #00adb5;
   font-size: 0.8rem;
-  border-radius: 20px;
+  border-radius: 10px;
   background: transparent;
-  min-width: 44px;
-  min-height: 44px;
-  width: 110px;
-  margin: 10px;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 button.reply-button:hover,
 button.toggle-replies-button:hover,
 button.delete-replies-button:hover {
-  border: #04858b;
+  border: 1px solid #04858b;
   background: #04858b;
   color: #fff;
 }
@@ -1184,6 +1204,7 @@ button.delete-replies-button:hover {
 .discussion-header,
 .reply-header {
   display: flex;
+  align-items: center;
 }
 
 .discussion-header > .user-info,
@@ -1195,29 +1216,31 @@ button.delete-replies-button:hover {
 .discussion-username,
 .reply-username {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.1rem;
+  color: #00adb5;
 }
 
 .discussion-date,
 .reply-date {
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #888;
 }
 
 .discussion-content,
 .reply-content {
   border: none;
-  background: #fff;
-  font-size: 1.2rem;
-  box-shadow: 0px 1px 2px #333;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px 30px;
+  background: #f4f4f9;
+  font-size: 1rem;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 15px;
 }
 
 .user-icon {
   width: 50px;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 /* Login */
