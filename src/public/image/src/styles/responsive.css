@@ -1,0 +1,302 @@
+@media only screen and (max-width: 1200px) {
+  .hero {
+    background: url("/dist/images/hero-image-large.jpg");
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  #wrapper-restaurant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #wrapper-restaurant-favorite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body{
+    width: 100%;
+  }
+  #wrapper-restaurant {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #wrapper-restaurant-favorite {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  nav > .wrapper > a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .hero-header > h1 {
+    font-size: 3rem;
+  }
+
+  .hero-header > h2 {
+    color: #fff;
+    margin: 0px;
+    padding: 10px 50px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    height: 70vh;
+    width: 100%;
+    background: url("/dist/images/hero-image-medium.jpg");
+  }
+
+  #main-content {
+    width: 100%;
+  }
+
+  button.hamburger-menu {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .logo > img {
+    padding-left: 1vh;
+    height: px;
+  }
+
+  .tampil > ul {
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+
+  .tampil {
+    display: inline-block;
+  }
+
+  .tampil > ul > li {
+    margin-top: 10px;
+    padding-top: 20px;
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .wrapper > .restoran_detail_poster {
+    max-width: 500px;
+    padding-left: 10vh;
+  }
+
+  .restoran_detai_info > h3 {
+    text-align: center;
+  }
+
+  .restoran_detai_info > h4 {
+    text-align: center;
+  }
+
+  .restoran_detai_info > p {
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  .restoran_description > h4 {
+    text-align: center;
+  }
+
+  .restoran_description > p {
+    text-align: justify;
+    padding: 10px 23px;
+  }
+
+  .restoran_detail_menu {
+    display: grid;
+    grid-template-columns: 80%;
+    padding-left: 10vh;
+  }
+
+  .restoran_detail_review > h3 {
+    text-align: center;
+  }
+
+  .restoran_detail_review > ul {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding-left: 10vh;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 50vh;
+    background: url("/dist/images/hero-image-small.jpg");
+  }
+
+  #main-content {
+    width: 100%;
+  }
+
+  #wrapper-restaurant {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #wrapper-restaurant-favorite {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  nav {
+    position: sticky;
+  }
+
+  nav > .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo > img {
+    padding-left: 1vh;
+    height: 70px;
+  }
+
+  .nav_menu > ul > li > a::after {
+    content: "";
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #ebb22f;
+    transform: scale(0);
+    transition: 0.2s linear;
+  }
+
+  .nav_menu > ul > li > a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .hero-header > h1 {
+    font-size: 2rem;
+  }
+
+  .hero-header > h2 {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  #main-content > h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+  }
+
+  #main-content > p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #000;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+
+  .wrapper > .restoran_detail_poster {
+    max-width: 300px;
+    padding-left: 10vh;
+  }
+
+  .restoran_detail_review > ul {
+    display: grid;
+    grid-template-columns: 80%;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  footer > .wrapper > p {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper > .restoran_detail_poster img{
+    display: block;
+    justify-items: center;
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .restoran_detai_info > h3 {
+    font-size: 1rem;
+  }
+
+  .restoran_detai_info > h4 {
+    font-size: 1rem;
+  }
+
+  .restoran_detai_info > p {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  #main-content > .restoran > .wrapper > img {
+    width: 100%;
+  }
+
+  #review-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+.wrapper > .restoran_detail_poster {
+    display: inline-block;
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+  }
+
+  .wrapper > .restoran_detail_title > h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .wrapper > .restoran_detail_poster {
+    display: inline-block;
+    max-width: 150px;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .wrapper > .restoran_detail_poster {
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+  }
+}

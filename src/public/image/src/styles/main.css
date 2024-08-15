@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;1,6..12,300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  padding: 20px 0px;
+}
+
+/* Nav */
+nav {
+  width: 100%;
+  background-color: #222831;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  align-items: center;
+}
+
+nav > .wrapper > a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  padding-left: 15vh;
+  height: 90px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav_menu {
+  width: 50%;
+}
+
+.nav_menu > ul {
+  display: flex;
+  list-style-type: none;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav_menu > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.nav_menu > ul > li > a:hover {
+  color: #ebb22f;
+}
+
+.nav_menu > ul > li > a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #ebb22f;
+  transform: scale(0);
+  transition: 0.2s linear;
+}
+
+.nav_menu > ul > li > a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Humberg Button */
+button.hamburger-menu {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px;
+  padding-left: 90px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+button.hamburger-menu > i {
+  color: #fff;
+  font-size: 1.5rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button.hamburger-menu > i.icon-close {
+  display: none;
+}
+
+/* Hero Section */
+header {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
+}
+
+.hero {
+  background: url("../public/images/heros/hero-image.jpg");
+  height: 85vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
+}
+
+.opacity-header {
+  background-color: #222831;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-header > h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.hero-header > h1 > span {
+  color: #ffce10;
+}
+
+.hero-header > h2 {
+  color: #fff;
+  margin: 0px;
+  padding: 10px 50px;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.hero-header > a {
+  min-height: 44px;
+  min-width: 44px;
+  text-decoration: none;
+  color: #333;
+  text-shadow: none;
+}
+
+.button {
+  background-color: #ffce10;
+  padding: 4px 5px 1px 8px;
+  border-radius: 10px;
+  transition: 0.3;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.button:hover {
+  font-size: 1.2rem;
+  font-style: bold;
+  padding: 15px;
+  background-color: #eeeeee;
+  color: black;
+}
+
+/* Main content */
+#main-content {
+  background-color: #eeeeee;
+  color: #000;
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+}
+
+#main-content > .wrapper {
+  padding: 50px 0px;
+}
+
+#main-content > h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
+}
+
+#main-content > p {
+  text-align: center;
+  color: #000;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 50px;
+}
+
+#wrapper-restaurant {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#wrapper-restaurant-favorite {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-height: 60vh;
+}
+
+.restaurant-item_not_found > h1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.restoran_list {
+  border: 1px solid #ddd; 
+  vertical-align: top; 
+  box-sizing: border-box;
+  transition: transform 0.3s; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+}
+
+.restoran_list_img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.restoran_list {
+  border-radius: 10px;
+}
+
+.restoran_list > a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.restoran_list:hover {
+  transform: translateY(-6px);
+}
+
+.restoran_list_img {
+  width: 100%; 
+  height: auto;
+}
+
+.restoran_list_content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+  border-radius: 10px;
+}
+
+.restoran_list_title {
+  min-width: 44px;
+  min-height: 44px;
+  transition: font-size 0.3s;
+  font-size: 24px;
+  color: #666; 
+  text-decoration: none; 
+}
+
+.restoran_list_title:hover,
+.restoran_list_title:focus {
+  font-size: 30px;
+  color: #000;
+}   
+
+.restoran_list_rating {
+  color: #333;
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.restoran_list_rating_value{
+  display: inline-block;
+  font-size: 1.3rem;
+  min-width: 44px;
+  min-height: 44px;
+  font-weight: bold;
+  color: #ffce10;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.restoran_city {
+  position: absolute;
+  margin: 10px;
+  top: 10px; 
+  right: 0;
+  left: auto; 
+  color: #fff;
+  background-color: #393E46;
+  border-radius:10px;
+  display: inline-block; 
+  padding: 5px 20px; 
+}
+
+.restoran_list_desc {
+  font-size: 16px; 
+  color: #555; 
+}
+
+/* Detail Restoran */
+.restoran {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 16px;
+}
+
+.restoran_detail_info {
+  width: 100%;
+}
+
+.restoran_description > p {
+  text-align: justify;
+}
+
+.wrapper > .restoran_detail_title > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.wrapper > .restoran_detail_poster {
+  justify-items: center;
+  max-width: 800px;
+}
+
+.restoran_detail_menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.restoran_detail_menu_makan {
+  border: 1px;
+  border-radius: 5px;
+  background-color: #00ADB5;
+}
+
+.restoran_detail_menu_makan > h4 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.restoran_detail_menu_makan > ul {
+  color: #222831;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Review */
+#add-review-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#review-list {
+  margin-bottom: 20px;
+}
+
+#review-list label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#review-list input[type="text"],
+#review-list textarea {
+  min-width: 44px;
+  min-height: 44px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#review-list textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.restoran_detail_review > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.restoran_detail_review > ul > li {
+  border: 1px;
+  border-radius: 5px;
+  background-color: #ebb22f;
+  padding: 0px 5px 0px 10px;
+  color: #000000;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Like Button */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #393E46;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #222831;
+  color: #fff;
+  text-align: center;
+}
+
+/* Skip to Content */
+.skip-to-content {
+  font-family: "Nunito Sans", sans-serif;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #ebb22f;
+  color: white;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* loading */
+@keyframes putar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: solid 5px #ccc;
+  border-top-color: #ff6a00;
+  border-radius: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation: putar 2s linear infinite;
+}

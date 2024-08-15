@@ -1372,6 +1372,14 @@ button.delete-replies-button:hover {
   text-decoration: underline;
 }
 
+#emailError {
+  color: rgb(245, 80, 80);
+}
+
+#passwordError {
+  color: rgb(245, 80, 80);
+}
+
 /* Register */
 .register {
   min-height: 100vh;
