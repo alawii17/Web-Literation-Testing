@@ -6,20 +6,21 @@ LITERATION TESTING merupakan sebuah aplikasi berbasis web yang bertujuan untuk m
 ```sh
 https://github.com/alawii17/Web-Literation-Testing.git
 ```
-2. Jalankan Composer Update di terminal
+2. Masukan API URL di file src/script/global/config.js
+3. Jalankan Composer Update di terminal
 ```sh
 composer update
 ```
-3. Instal Library menggunakan npm
+4. Instal Library menggunakan npm
 ```sh
 npm install
 ```
-4. Jalankan perintah untuk mem build Project
+5. Jalankan perintah untuk mem build Project
 ```sh
 npm run build
 ```
 
-5. Jalankan perintah untuk menjalankan Project
+6. Jalankan perintah untuk menjalankan Project
 ```sh
 npm run start-dev
 ```
