@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'https://web-lteration-testing-backend-production-a20e.up.railway.app',
+  BASE_URL: 'YOUR API URL',
 };
 
 export default CONFIG;
